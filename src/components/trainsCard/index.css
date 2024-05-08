@@ -1,0 +1,116 @@
+.idris-content-card {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .idris-content-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.idris-card-image-container {
+  width: 100%;
+  min-height: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .idris-card-image-container {
+    width: 30%;
+    max-width: 220px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .idris-card-image-container {
+    width: 30%;
+    max-width: 160px;
+  }
+}
+
+.idris-card-image {
+  width: 100%;
+  min-height: inherit;
+  border-radius: 10px;
+}
+
+.idris-card-content-container {
+  width: 100%;
+  flex-grow: 1;
+  margin-top: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .idris-card-content-container {
+    width: 70%;
+    margin-left: 18px;
+    margin-top: 0px;
+  }
+}
+
+.idris-card-content-provider-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.idris-card-content-provider-logo {
+  width: 40px;
+  margin-right: 6px;
+}
+
+.idris-card-content-provider-name {
+  font-family: "Roboto";
+  font-size: 18px;
+  color: #242424;
+  font-weight: 600;
+}
+
+.card-duration-container {
+  display: flex;
+  align-items: center;
+}
+
+.card-journey-dep-time {
+  font-size: 16px;
+  color: #000000;
+  font-family: "Roboto";
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.card-dur-hr-line {
+  width: 30px;
+  height: 1px;
+  color: #8d8d8d;
+  border-radius: 1px;
+}
+
+.card-journey-duration {
+  font-size: 12px;
+  color: #8d8d8d;
+  font-family: "Roboto";
+  font-weight: 400;
+  border: 1px solid #8d8d8d;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.card-journey-arr-time {
+  font-size: 16px;
+  color: #000000;
+  font-family: "Roboto";
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.card-price-container span {
+  font-size: 24px;
+  color: #030303;
+  font-weight: 700;
+  font-family: "Roboto";
+}

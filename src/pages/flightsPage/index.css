@@ -1,0 +1,21 @@
+.idris-main-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.idris-main-content-container {
+  width: 100%;
+}
+
+.idris-content-heading {
+  font-family: "Roboto";
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.mail-barcode-image {
+  width: 100%;
+}
