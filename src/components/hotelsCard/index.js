@@ -22,7 +22,7 @@ const HotelsCard = ({ hotel }) => {
         newCheckInDate
       );
 
-      const url = "http://localhost:5009/api/payment-checkout/hotels";
+      const url = "http://localhost:4444/hotels/payment-checkout";
       const options = {
         method: "POST",
         headers: {

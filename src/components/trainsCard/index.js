@@ -11,7 +11,7 @@ const TrainsCard = ({ trains }) => {
       setIsBookButtonClicked(true);
       const stripe = await loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 
-      const url = "http://localhost:5009/api/payment-checkout/trains";
+      const url = "http://localhost:4444/trains/payment-checkout";
       const options = {
         method: "POST",
         headers: {

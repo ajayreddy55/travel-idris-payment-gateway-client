@@ -5,6 +5,8 @@ import FlightsPage from "./pages/flightsPage";
 import HotelsPage from "./pages/hotelsPage";
 import BusesPage from "./pages/busesPage";
 import TrainsPage from "./pages/trainsPage";
+import ViewFlightTicket from "./pages/viewFlightTicket.js";
+import HolidayPackagesPage from "./pages/packagesPage.js/index.js";
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
       <Route exact path="/hotels" element={<HotelsPage />} />
       <Route exact path="/buses" element={<BusesPage />} />
       <Route exact path="/trains" element={<TrainsPage />} />
+      <Route exact path="/holiday-packages" element={<HolidayPackagesPage />} />
+      <Route exact path="/flight-ticket-view" element={<ViewFlightTicket />} />
     </Routes>
   );
 };

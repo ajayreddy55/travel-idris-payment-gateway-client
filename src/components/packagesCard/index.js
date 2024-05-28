@@ -3,15 +3,20 @@ import "./index.css";
 
 import { loadStripe } from "@stripe/stripe-js";
 
-const BusesCard = ({ buses }) => {
+const PackagesCard = ({ packages }) => {
   const [isBookButtonClicked, setIsBookButtonClicked] = useState(false);
+
+  const newCheckInDate = new Date(packages.journeyDate);
+  const newCheckOutDate = new Date(packages.returnDate);
+  const checkInDateFormat = `${newCheckInDate.getFullYear()}-${newCheckInDate.getMonth()}-${newCheckInDate.getDate()}`;
+  const checkOutDateFormat = `${newCheckOutDate.getFullYear()}-${newCheckOutDate.getMonth()}-${newCheckOutDate.getDate()}`;
 
   const handleBooking = async () => {
     try {
       setIsBookButtonClicked(true);
       const stripe = await loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 
-      const url = "http://localhost:4444/buses/payment-checkout";
+      const url = "http://localhost:4444/holiday-packages/payment-checkout";
       const options = {
         method: "POST",
         headers: {
@@ -22,13 +27,12 @@ const BusesCard = ({ buses }) => {
           name: process.env.REACT_APP_NAME,
           email: process.env.REACT_APP_EMAIL,
           bookingData: {
-            name: buses.busProviderName,
-            quantity: 1,
-            journeyId: buses._id,
-            price: buses.price,
-            image: buses.providerLogo,
-            categoryId: buses.categoryId,
-            seats: "2 3",
+            name: packages.packageName,
+            quantity: 3,
+            price: packages.price,
+            image: packages.providerLogo,
+            categoryId: packages.categoryId,
+            packageId: packages._id,
           },
         }),
       };
@@ -57,7 +61,7 @@ const BusesCard = ({ buses }) => {
         <div className="idris-card-image-container">
           <img
             className="idris-card-image"
-            src="https://www.shutterstock.com/image-photo/bus-traveling-on-asphalt-road-600nw-1345741577.jpg"
+            src="https://res.klook.com/image/upload/q_85/c_fill,w_280,h_280/q_65/activities/mlrtjvvgqiphsb0ht8xy.jpg"
             alt="contentImage"
           />
         </div>
@@ -66,21 +70,27 @@ const BusesCard = ({ buses }) => {
             <img
               className="idris-card-content-provider-logo"
               alt="provider logo"
-              src={buses.providerLogo}
+              src={packages.providerLogo}
             />
             <h5 className="idris-card-content-provider-name">
-              {buses.busProviderName}
+              {packages.providerName}
             </h5>
           </div>
+          <div className="mt-2">
+            <p className="card-hotel-city">{packages.packageName}</p>
+          </div>
+          <div className="mt-2">
+            <p className="card-hotel-city">{packages.departureCity}</p>
+          </div>
           <div className="card-duration-container mt-2">
-            <span className="card-journey-dep-time">{buses.departureTime}</span>
+            <span className="card-journey-dep-time">{checkInDateFormat}</span>
             <hr className="card-dur-hr-line" />
-            <span className="card-journey-duration">{buses.duration}</span>
+            <span className="card-hotel-duration">to</span>
             <hr className="card-dur-hr-line" />
-            <span className="card-journey-arr-time">{buses.arrivalTime}</span>
+            <span className="card-journey-arr-time">{checkOutDateFormat}</span>
           </div>
           <div className="card-price-container mt-2">
-            <span>₹ {buses.price}/-</span>
+            <span>₹ {packages.price}/-</span>
           </div>
           <div className="card-book-button-container mt-2">
             <button
@@ -97,4 +107,4 @@ const BusesCard = ({ buses }) => {
   );
 };
 
-export default BusesCard;
+export default PackagesCard;

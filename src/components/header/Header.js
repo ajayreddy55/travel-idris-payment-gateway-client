@@ -44,6 +44,11 @@ const Header = () => {
                 Hotels
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/holiday-packages">
+                Holiday Packages
+              </a>
+            </li>
           </ul>
           <form className="d-flex" role="search">
             <input

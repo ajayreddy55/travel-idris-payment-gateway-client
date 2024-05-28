@@ -14,7 +14,7 @@ const TrainsPage = () => {
 
   const getTrainsData = async () => {
     try {
-      const url = "http://localhost:5009/api/get-all-trains";
+      const url = "http://localhost:4444/trains/get-all-trains";
       const options = {
         method: "GET",
         headers: {

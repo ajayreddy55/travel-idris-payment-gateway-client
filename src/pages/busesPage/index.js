@@ -14,7 +14,7 @@ const BusesPage = () => {
 
   const getBusesData = async () => {
     try {
-      const url = "http://localhost:5009/api/get-all-buses";
+      const url = "http://localhost:4444/buses/get-all-buses";
       const options = {
         method: "GET",
         headers: {

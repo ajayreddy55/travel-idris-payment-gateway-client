@@ -1,0 +1,213 @@
+.idris-flight-ticket-view-main-container {
+  width: 100%;
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.idris-ticket-view-tabs-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.idris-ticket-view-tab {
+  min-width: 130px;
+  min-height: 40px;
+  border: 1px solid #635c5c;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 22px;
+  padding: 12px;
+  /* font-family: "Roboto"; */
+  font-size: 16px;
+  font-weight: 500;
+  color: #635c5c;
+  text-decoration: none;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.idris-ticket-view-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.idris-ticket-view-heading-text {
+  font-size: 18px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.idris-ticket-view-table-container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.idris-ticket-details-table {
+  border: 1px solid #b3b2b2;
+  border-top-left-radius: 10px !important;
+  width: 80%;
+  border-collapse: separate;
+  border-spacing: 0;
+  flex-shrink: 1;
+}
+
+.idris-ticket-details-table thead tr {
+  border-top-left-radius: 10px;
+  border: none;
+}
+
+.idris-ticket-details-table thead tr th {
+  background-color: #150036;
+  padding: 10px;
+  border-right: 1px solid #b3b2b2;
+}
+
+.idris-ticket-details-table thead tr th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.idris-ticket-details-table thead tr th div {
+  display: flex;
+  align-items: center;
+}
+
+.idris-ticket-details-table thead tr th img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.idris-ticket-details-table thead tr th span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.idris-ticket-details-table tbody tr td {
+  padding: 10px;
+  border-right: 1px solid #b3b2b2;
+}
+
+.table-ticket-view-flight-container-details {
+  display: flex;
+  align-items: center;
+}
+
+.table-ticket-view-flight-container-details img {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  margin-right: 5px;
+}
+
+.table-ticket-view-flight-container-details span {
+  font-size: 24px;
+  color: #17093a;
+  font-weight: 700;
+}
+
+.table-flight-ticket-view-seat {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.table-flight-ticket-view-class {
+  color: #17093a;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.table-ticket-view-from-details-time {
+  color: #180c36;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.table-ticket-view-from-details-date {
+  color: #029702;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.table-ticket-view-from-details-city {
+  color: #000000;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.table-ticket-view-from-details-airport {
+  color: #686767;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.table-ticket-view-time-duration {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.ticket-view-hr-line {
+  min-height: 100%;
+  border: 1px dashed #000000;
+  margin: 0px 18px;
+}
+
+.idris-ticket-details-bar-code-table {
+  border: 1px solid #b3b2b2;
+  border-top-right-radius: 10px !important;
+  width: 20%;
+  border-collapse: separate;
+  border-spacing: 0;
+  flex-shrink: 1;
+}
+
+.idris-ticket-details-bar-code-table thead tr {
+  border-top-right-radius: 10px;
+  border: none;
+}
+
+.idris-ticket-details-bar-code-table thead tr th {
+  background-color: #150036;
+  padding: 10px;
+  border-right: 1px solid #b3b2b2;
+}
+
+.idris-ticket-details-bar-code-table thead tr th:first-child {
+  border-top-right-radius: 10px;
+}
+
+.idris-ticket-details-bar-code-table thead tr th span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.table-ticket-view-bar-code-image-container {
+  transform: rotate(-90deg);
+  width: 150px;
+  height: 100px;
+}
+
+.table-ticket-view-barcode-image {
+  width: 150px;
+  /* transform: rotate(90deg); */
+  /* height: 100px; */
+  height: 100px;
+}

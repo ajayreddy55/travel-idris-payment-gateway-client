@@ -14,7 +14,7 @@ const HotelsPage = () => {
 
   const getHotelsData = async () => {
     try {
-      const url = "http://localhost:5009/api/get-all-hotels";
+      const url = "http://localhost:4444/hotels/get-all-hotels";
       const options = {
         method: "GET",
         headers: {

@@ -2,19 +2,20 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 
 import "./index.css";
-import FlightsCard from "../../components/flightsCard";
+import PackagesCard from "../../components/packagesCard";
 
-const FlightsPage = () => {
-  const [flightsData, setFlightsData] = useState([]);
+const HolidayPackagesPage = () => {
+  const [packagesData, setPackagesData] = useState([]);
 
   useEffect(() => {
-    getFlightsData();
+    getPackagesData();
     //eslint-disable-next-line
   }, []);
 
-  const getFlightsData = async () => {
+  const getPackagesData = async () => {
     try {
-      const url = "http://localhost:4444/flights/get-all-flights";
+      const url =
+        "http://localhost:4444/holiday-packages/get-all-holiday-packages";
       const options = {
         method: "GET",
         headers: {
@@ -26,9 +27,10 @@ const FlightsPage = () => {
 
       if (responseData.ok) {
         const responseDataJson = await responseData.json();
-        setFlightsData(responseDataJson.flights);
+
+        setPackagesData(responseDataJson.packages);
       } else {
-        setFlightsData([]);
+        setPackagesData([]);
       }
     } catch (error) {
       console.log(error.message);
@@ -42,10 +44,10 @@ const FlightsPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 mt-4 mb-3">
-              <h3 className="idris-content-heading">Flights</h3>
+              <h3 className="idris-content-heading">Holiday Packages</h3>
             </div>
-            {flightsData.map((eachFlight) => (
-              <FlightsCard key={eachFlight._id} flight={eachFlight} />
+            {packagesData.map((eachPackage) => (
+              <PackagesCard key={eachPackage._id} packages={eachPackage} />
             ))}
           </div>
         </div>
@@ -54,4 +56,4 @@ const FlightsPage = () => {
   );
 };
 
-export default FlightsPage;
+export default HolidayPackagesPage;
